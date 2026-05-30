@@ -587,7 +587,7 @@ match key.code {
                         total_size: format_bytes(total_size),
                     };
                 }
-                KeyCode::Char('u' | 'U') => {
+                KeyCode::Char('u') | KeyCode::Char('U') => {
                     match self.backup.list_backups() {
                         Ok(backups) => {
                             if backups.is_empty() {
