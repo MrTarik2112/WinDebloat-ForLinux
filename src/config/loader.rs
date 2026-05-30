@@ -26,7 +26,7 @@ pub fn load_config() -> Config {
         }
     } else {
         let default = Config::default();
-        if let Err(e) = save_default_config(&path) {
+        if let Err(_e) = save_default_config(&path) {
             eprintln!("Warning: could not create default config at {}: run 'windebloat config reset' to reset", path.display());
         }
         default

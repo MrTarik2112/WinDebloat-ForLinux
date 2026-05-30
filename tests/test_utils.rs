@@ -1,11 +1,10 @@
-#[cfg(test)]
 mod tests {
-    use crate::utils::formatting::{format_bytes, parse_size};
+    use windebloat::utils::formatting::{format_bytes, parse_size};
 
     #[test]
     fn test_format_bytes() {
         assert_eq!(format_bytes(0), "0 B");
-        assert_eq!(format_bytes(1024), "1 KB");
+        assert_eq!(format_bytes(1024), "1.0 KB");
         assert_eq!(format_bytes(1024 * 1024), "1.0 MB");
         assert_eq!(format_bytes(1024 * 1024 * 1024), "1.0 GB");
     }

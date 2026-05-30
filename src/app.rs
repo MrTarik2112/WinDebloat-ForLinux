@@ -5,7 +5,7 @@ use std::time::{Duration, Instant};
 use crate::cli::Cli;
 use crate::config::loader::load_config;
 use crate::config::schema::Config;
-use crate::core::auto_clean::{AutoCleanEngine, AutoCleanPhase, AutoCleanProgress, AutoCleanReport, AutoCleanState, CategoryFindings, RiskLevel};
+use crate::core::auto_clean::{AutoCleanEngine, AutoCleanPhase, AutoCleanProgress, AutoCleanReport, AutoCleanState, RiskLevel};
 use crate::core::backup::Backup;
 use crate::core::cleaner::{CleanProgress, Cleaner};
 use crate::core::logger::Logger;
@@ -121,8 +121,8 @@ impl App {
         &mut self,
         terminal: &mut Terminal<CrosstermBackend<std::io::Stdout>>,
     ) -> Result<()> {
-        let poll_rate = Duration::from_millis(50);
-        let mut redraw_counter = 0u32;
+let poll_rate = Duration::from_millis(50);
+         let _redraw_counter = 0u32;
 
         while self.running {
             let active_category = self.ui
@@ -139,8 +139,6 @@ impl App {
                     active_category,
                 );
             })?;
-
-            redraw_counter += 1;
 
             if self.scanning {
                 if let Some(ref rx) = self.scan_rx {
@@ -368,7 +366,7 @@ impl App {
             match &ui.dialog {
                 Dialog::ConfirmClean { .. } => {
                     match key.code {
-                        KeyCode::Char('y' | 'Y') => {
+                        KeyCode::Char('y') | KeyCode::Char('Y') => {
                             let dialog = ui.dialog.clone();
                             ui.dialog = Dialog::None;
                             if let Dialog::ConfirmClean { total_items, .. } = dialog {
@@ -376,7 +374,7 @@ impl App {
                                 self.execute_clean(total_items);
                             }
                         }
-                        KeyCode::Char('n' | 'N') | KeyCode::Esc => {
+KeyCode::Char('n') | KeyCode::Char('N') | KeyCode::Esc => {
                             ui.dialog = Dialog::None;
                         }
                         _ => {}
@@ -391,8 +389,8 @@ impl App {
                     return;
                 }
                 Dialog::Quit => {
-                    match key.code {
-                        KeyCode::Char('y' | 'Y') => {
+match key.code {
+                         KeyCode::Char('y') | KeyCode::Char('Y') => {
                             self.running = false;
                         }
                         _ => {
@@ -430,7 +428,7 @@ impl App {
                                 }
                             }
                         }
-                        KeyCode::Char('d' | 'D') => {
+                        KeyCode::Char('d') | KeyCode::Char('D') => {
                             ui.dialog = Dialog::None;
                         }
                         KeyCode::Esc => {
@@ -476,10 +474,10 @@ impl App {
             let ui = self.ui.as_mut().unwrap();
 
             match key.code {
-                KeyCode::Char('q' | 'Q') => {
+                KeyCode::Char('q') | KeyCode::Char('Q') => {
                     ui.dialog = Dialog::Quit;
                 }
-                KeyCode::Char('?' | 'h' | 'H') => {
+                KeyCode::Char('?') | KeyCode::Char('h') | KeyCode::Char('H') => {
                     ui.help_visible = !ui.help_visible;
                 }
                 KeyCode::Esc => {
@@ -537,21 +535,21 @@ impl App {
                 KeyCode::Right => {
                     ui.focus = crate::tui::ui::PanelFocus::Content;
                 }
-                KeyCode::Char('t' | 'T') => {
+                KeyCode::Char('t') | KeyCode::Char('T') => {
                     if let Some(category) = ui.sidebar.selected() {
                         if let Some(result) = self.scan_results.iter_mut().find(|r| r.category == category) {
                             ui.content.toggle_all(&mut result.items);
                         }
                     }
                 }
-                KeyCode::Char('r' | 'R') => {
+                KeyCode::Char('r') | KeyCode::Char('R') => {
                     if let Some(category) = ui.sidebar.selected() {
                         if let Some(result) = self.scan_results.iter_mut().find(|r| r.category == category) {
                             ui.content.select_safe_only(&mut result.items);
                         }
                     }
                 }
-                KeyCode::Char('a' | 'A') => {
+                KeyCode::Char('a') | KeyCode::Char('A') => {
                     if let Some(category) = ui.sidebar.selected() {
                         if category == Category::Wizard {
                             let _ = ui;
@@ -562,7 +560,7 @@ impl App {
                         }
                     }
                 }
-                KeyCode::Char('s' | 'S') => {
+                KeyCode::Char('s') | KeyCode::Char('S') => {
                     if ui.sidebar.selected() == Some(Category::Wizard) {
                         ui.content.next_view();
                         ui.status_bar = format!("Wizard: {:?}", ui.content.wizard_view);
@@ -571,7 +569,7 @@ impl App {
                         self.start_scan(ScanMode::All);
                     }
                 }
-                KeyCode::Char('c' | 'C') => {
+                KeyCode::Char('c') | KeyCode::Char('C') => {
                     let selected: Vec<&CleanItem> = self.scan_results
                         .iter()
                         .flat_map(|r| r.items.iter())
@@ -617,11 +615,11 @@ impl App {
                 KeyCode::Char('/') => {
                     ui.dialog = Dialog::Search { query: String::new() };
                 }
-                KeyCode::Char('w' | 'W') => {
+                KeyCode::Char('w') | KeyCode::Char('W') => {
                     wizard_analysis = Some(self.collect_disk_analysis());
                     wizard_triggered = true;
                 }
-                KeyCode::Char('x' | 'X') => {
+                KeyCode::Char('x') | KeyCode::Char('X') => {
                     if self.auto_clean_state.is_none() {
                         self.start_auto_clean();
                     }
@@ -763,7 +761,7 @@ impl App {
                                     let inner = crate::tui::components::dialogs::centered_rect(72, height, area);
                                     let content = ratatui::layout::Rect::new(inner.x + 1, inner.y + 1, inner.width - 2, inner.height - 2);
                                     let mut cat_start = content.y + 2;
-                                    for (idx, cat) in ac.categorized.iter().enumerate() {
+                                    for (_idx, cat) in ac.categorized.iter().enumerate() {
                                         if y == cat_start {
                                             if x >= content.x + 1 && x < content.x + 4 {
                                                 let cat_id = cat.id.clone();
@@ -918,7 +916,6 @@ impl App {
         }
 
         if trigger_wizard_analysis {
-            let default_analysis = DiskAnalysis::default();
             let analysis = self.collect_disk_analysis();
             if let Some(ui) = self.ui.as_mut() {
                 let mut wizard = DiskWizardState::new();
@@ -1172,8 +1169,8 @@ impl App {
                 }
             }
             AutoCleanStep::Confirm => {
-                match key.code {
-                    KeyCode::Char('y' | 'Y') => {
+match key.code {
+                    KeyCode::Char('y') | KeyCode::Char('Y') => {
                         if let Some(ref mut state) = self.auto_clean_state {
                             state.cleaning = true;
                         }
@@ -1186,8 +1183,7 @@ impl App {
                         }
                         self.execute_auto_clean();
                     }
-                    KeyCode::Char('s' | 'S') => {
-                        // Safe-only mode
+                    KeyCode::Char('s') | KeyCode::Char('S') => {
                         if let Some(ref state) = self.auto_clean_state {
                             self.auto_clean_review_selected = state.categorized.iter()
                                 .filter(|c| c.risk.level <= RiskLevel::Caution)
@@ -1201,7 +1197,7 @@ impl App {
                             ui.auto_clean_step = AutoCleanStep::Confirm;
                         }
                     }
-                    KeyCode::Char('n' | 'N') | KeyCode::Esc => {
+                    KeyCode::Char('n') | KeyCode::Char('N') | KeyCode::Esc => {
                         if let Some(ui) = self.ui.as_mut() {
                             ui.auto_clean_step = AutoCleanStep::CategoryReview;
                         }
@@ -1229,7 +1225,7 @@ impl App {
                             ui.status_bar = "Ready. Press [X] for Auto Clean.".to_string();
                         }
                     }
-                    KeyCode::Char('u' | 'U') => {
+KeyCode::Char('u') | KeyCode::Char('U') => {
                         if let Some(ref state) = self.auto_clean_state.clone() {
                             if let Some(ref backup_id) = state.backup_id {
                                 match self.backup.restore_backup(backup_id) {

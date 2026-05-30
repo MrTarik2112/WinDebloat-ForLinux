@@ -7,11 +7,9 @@ use std::path::Path;
 use std::fs;
 use walkdir::WalkDir;
 use sysinfo::Disks;
-use rayon::prelude::*;
 
 const KB: u64 = 1024;
 const MB: u64 = 1024 * KB;
-const GB: u64 = 1024 * MB;
 
 pub struct DiskModule {
     min_size_large: u64,

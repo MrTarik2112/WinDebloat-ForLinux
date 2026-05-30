@@ -1,4 +1,4 @@
-use crate::core::auto_clean::{AutoCleanReport, CategoryReport, CleanError, DiskComparison, ReportSummary, Suggestion};
+use crate::core::auto_clean::AutoCleanReport;
 use crate::utils::error::Result;
 
 pub enum ReportFormat {

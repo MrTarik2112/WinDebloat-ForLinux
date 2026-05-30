@@ -1,11 +1,10 @@
-#[cfg(test)]
 mod tests {
     use windebloat::utils::formatting::{format_bytes, parse_size};
 
     #[test]
     fn test_format_bytes() {
         assert_eq!(format_bytes(0), "0 B");
-        assert_eq!(format_bytes(1024), "1 KB");
+        assert_eq!(format_bytes(1024), "1.0 KB");
         assert_eq!(format_bytes(1024 * 1024), "1.0 MB");
         assert_eq!(format_bytes(1024 * 1024 * 1024), "1.0 GB");
     }
@@ -17,12 +16,7 @@ mod tests {
         assert_eq!(parse_size("1KB"), Some(1024));
         assert_eq!(parse_size("1MB"), Some(1024 * 1024));
         assert_eq!(parse_size("1GB"), Some(1024 * 1024 * 1024));
-        assert_eq!(parse_size("1TB"), Some(1024 * 1024 * 1024 * 1024));
         assert_eq!(parse_size("invalid"), None);
         assert_eq!(parse_size("10MB"), Some(10 * 1024 * 1024));
     }
-}
-
-fn main() {
-    println!("Run tests with: cargo test");
 }

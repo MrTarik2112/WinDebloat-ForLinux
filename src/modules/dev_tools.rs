@@ -2,7 +2,6 @@ use super::CleanModule;
 use crate::core::scanner::{Category, CleanItem};
 use crate::os::distro::OSInfo;
 use crate::utils::error::Result;
-use std::path::Path;
 
 pub struct DevToolsModule;
 

@@ -3,7 +3,6 @@ use crate::core::scanner::{Category, CleanItem};
 use crate::os::distro::OSInfo;
 use crate::utils::error::Result;
 use crate::utils::disk::dir_size;
-use std::path::Path;
 
 pub struct GamesModule;
 

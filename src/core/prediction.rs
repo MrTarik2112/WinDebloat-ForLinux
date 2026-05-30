@@ -1,8 +1,6 @@
-use std::collections::HashMap;
 use std::path::PathBuf;
 
 use crate::core::auto_clean::{CategoryFindings, SystemSnapshot};
-use crate::utils::error::Result;
 
 #[derive(Debug, Clone)]
 pub struct GrowthPrediction {

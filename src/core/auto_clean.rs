@@ -9,7 +9,7 @@ use crate::modules::CleanModule;
 use crate::core::scanner::{Category, CleanItem};
 use crate::modules::ModuleRegistry;
 use crate::os::distro::OSInfo;
-use crate::utils::disk::{dir_size, count_files};
+use crate::utils::disk::dir_size;
 use crate::utils::error::Result;
 
 #[derive(Debug, Clone, Copy, PartialEq, Eq, Hash, PartialOrd, Ord, Serialize, Deserialize)]
@@ -497,7 +497,7 @@ impl AutoCleanEngine {
         backup: &Backup,
         tx: mpsc::Sender<AutoCleanProgress>,
         safe_only: bool,
-        selected_categories: Option<&[String]>,
+        _selected_categories: Option<&[String]>,
     ) {
         let start = Instant::now();
 

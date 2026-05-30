@@ -403,7 +403,7 @@ impl ContentPanel {
 
         let _total_pct: u32 = pie_data.iter().map(|(_, p, _)| *p).sum();
         for (name, pct, color) in &pie_data {
-            let bar_len = (*pct as usize * max_bar_width / 100);
+            let bar_len = *pct as usize * max_bar_width / 100;
             let bar = "█".repeat(bar_len);
             buf.set_string(area.x, y, &format!("[{:>6}] {}", format!("{}%", pct), name), Style::default().fg(*color));
             buf.set_string(area.x + 20, y, &bar, Style::default().fg(*color));
@@ -492,7 +492,7 @@ impl ContentPanel {
             let color = if is_selected { colors.text_bright } else { colors.text };
             let bg = if is_selected { colors.selected_bg } else { colors.bg };
 
-            let bar_len = (*pct as usize * max_bar_width / 100);
+            let bar_len = *pct as usize * max_bar_width / 100;
             let bar = "█".repeat(bar_len);
 
             buf.set_string(area.x, y, &format!("{} {}", marker, name), Style::default().fg(color).bg(bg));
@@ -595,7 +595,7 @@ impl ContentPanel {
         let max_items = (area.height as usize - 4).min(presets.len());
 
         for (i, (idx, icon, name, desc, estimate, safe)) in presets.iter().take(max_items).enumerate() {
-            let is_selected = self.list_state.selected() == Some(*idx as usize);
+            let is_selected = self.list_state.selected() == Some(i);
             let marker = if is_selected { "▸" } else { " " };
             let color = if is_selected { colors.text_bright } else { colors.text };
             let bg = if is_selected { colors.selected_bg } else { colors.bg };

@@ -2,8 +2,7 @@ use ratatui::prelude::*;
 use ratatui::widgets::*;
 use ratatui::layout::{Alignment, Rect};
 use crate::core::scanner::CleanItem;
-use crate::core::auto_clean::{AutoCleanPhase, AutoCleanState, AutoCleanProgress, AutoCleanReport, CategoryFindings, PhaseStatus, RiskLevel, PhaseHistoryEntry};
-use crate::tui::components::charts::render_bar_chart;
+use crate::core::auto_clean::{AutoCleanPhase, AutoCleanState, RiskLevel};
 use crate::tui::components::widgets::ProgressWidget;
 
 #[derive(Clone, Debug, PartialEq, Eq)]
