@@ -1,0 +1,15 @@
+/home/trk/Documents/code/WinDebloat-ForLinux/target/debug/deps/uuid-227ac6fdae7c3594.d: /home/trk/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/uuid-1.23.1/src/lib.rs /home/trk/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/uuid-1.23.1/src/macros.rs /home/trk/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/uuid-1.23.1/src/builder.rs /home/trk/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/uuid-1.23.1/src/error.rs /home/trk/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/uuid-1.23.1/src/non_nil.rs /home/trk/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/uuid-1.23.1/src/parser.rs /home/trk/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/uuid-1.23.1/src/fmt.rs /home/trk/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/uuid-1.23.1/src/timestamp.rs /home/trk/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/uuid-1.23.1/src/v4.rs /home/trk/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/uuid-1.23.1/src/rng.rs /home/trk/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/uuid-1.23.1/src/external.rs
+
+/home/trk/Documents/code/WinDebloat-ForLinux/target/debug/deps/libuuid-227ac6fdae7c3594.rmeta: /home/trk/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/uuid-1.23.1/src/lib.rs /home/trk/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/uuid-1.23.1/src/macros.rs /home/trk/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/uuid-1.23.1/src/builder.rs /home/trk/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/uuid-1.23.1/src/error.rs /home/trk/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/uuid-1.23.1/src/non_nil.rs /home/trk/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/uuid-1.23.1/src/parser.rs /home/trk/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/uuid-1.23.1/src/fmt.rs /home/trk/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/uuid-1.23.1/src/timestamp.rs /home/trk/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/uuid-1.23.1/src/v4.rs /home/trk/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/uuid-1.23.1/src/rng.rs /home/trk/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/uuid-1.23.1/src/external.rs
+
+/home/trk/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/uuid-1.23.1/src/lib.rs:
+/home/trk/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/uuid-1.23.1/src/macros.rs:
+/home/trk/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/uuid-1.23.1/src/builder.rs:
+/home/trk/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/uuid-1.23.1/src/error.rs:
+/home/trk/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/uuid-1.23.1/src/non_nil.rs:
+/home/trk/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/uuid-1.23.1/src/parser.rs:
+/home/trk/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/uuid-1.23.1/src/fmt.rs:
+/home/trk/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/uuid-1.23.1/src/timestamp.rs:
+/home/trk/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/uuid-1.23.1/src/v4.rs:
+/home/trk/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/uuid-1.23.1/src/rng.rs:
+/home/trk/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/uuid-1.23.1/src/external.rs:

@@ -1,0 +1,15 @@
+/home/trk/Documents/code/WinDebloat-ForLinux/target/debug/deps/nix-d440b70da006567f.d: /home/trk/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/nix-0.30.1/src/lib.rs /home/trk/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/nix-0.30.1/src/macros.rs /home/trk/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/nix-0.30.1/src/errno.rs /home/trk/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/nix-0.30.1/src/fcntl.rs /home/trk/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/nix-0.30.1/src/sys/mod.rs /home/trk/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/nix-0.30.1/src/sys/signal.rs /home/trk/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/nix-0.30.1/src/sys/sysinfo.rs /home/trk/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/nix-0.30.1/src/sys/time.rs /home/trk/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/nix-0.30.1/src/unistd.rs /home/trk/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/nix-0.30.1/src/features.rs /home/trk/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/nix-0.30.1/src/sys/utsname.rs
+
+/home/trk/Documents/code/WinDebloat-ForLinux/target/debug/deps/libnix-d440b70da006567f.rmeta: /home/trk/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/nix-0.30.1/src/lib.rs /home/trk/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/nix-0.30.1/src/macros.rs /home/trk/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/nix-0.30.1/src/errno.rs /home/trk/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/nix-0.30.1/src/fcntl.rs /home/trk/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/nix-0.30.1/src/sys/mod.rs /home/trk/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/nix-0.30.1/src/sys/signal.rs /home/trk/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/nix-0.30.1/src/sys/sysinfo.rs /home/trk/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/nix-0.30.1/src/sys/time.rs /home/trk/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/nix-0.30.1/src/unistd.rs /home/trk/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/nix-0.30.1/src/features.rs /home/trk/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/nix-0.30.1/src/sys/utsname.rs
+
+/home/trk/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/nix-0.30.1/src/lib.rs:
+/home/trk/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/nix-0.30.1/src/macros.rs:
+/home/trk/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/nix-0.30.1/src/errno.rs:
+/home/trk/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/nix-0.30.1/src/fcntl.rs:
+/home/trk/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/nix-0.30.1/src/sys/mod.rs:
+/home/trk/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/nix-0.30.1/src/sys/signal.rs:
+/home/trk/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/nix-0.30.1/src/sys/sysinfo.rs:
+/home/trk/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/nix-0.30.1/src/sys/time.rs:
+/home/trk/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/nix-0.30.1/src/unistd.rs:
+/home/trk/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/nix-0.30.1/src/features.rs:
+/home/trk/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/nix-0.30.1/src/sys/utsname.rs:

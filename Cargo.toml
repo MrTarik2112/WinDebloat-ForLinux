@@ -1,0 +1,36 @@
+[package]
+name = "windebloat"
+version = "0.1.0"
+edition = "2021"
+description = "Advanced Linux debloating and cleaning tool with TUI"
+
+[dependencies]
+ratatui = "0.29"
+crossterm = "0.28"
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+toml = "0.8"
+os_info = "3"
+walkdir = "2"
+glob = "0.3"
+chrono = { version = "0.4", features = ["serde"] }
+sysinfo = "0.33"
+uuid = { version = "1", features = ["v4"] }
+tar = "0.4"
+flate2 = "1"
+dirs = "5"
+log = "0.4"
+env_logger = "0.11"
+clap = { version = "4", features = ["derive"] }
+thiserror = "2"
+anyhow = "1"
+sha2 = "0.10"
+rayon = "1.10"
+
+[[bin]]
+name = "minimal_test"
+path = "src/bin/minimal_test.rs"
+
+[[bin]]
+name = "term_test"
+path = "src/bin/term_test.rs"
